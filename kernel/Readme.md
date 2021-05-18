@@ -1,1 +1,1 @@
-This is where the subroutine handlers and app tray are situated
+This is where the subroutine handlers are situated
