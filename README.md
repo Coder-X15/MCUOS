@@ -36,3 +36,6 @@ Let's look into those.
     * That can be done using the pins that are free from use, but that too requires you to set the status of usage of the pins (using the `digital_pinset.set_state(pin_number,    is_in_use)`) to `true` (if in use) or `false` (if not) to avoid meddling with those pins in use).
 
 More info will be added after completion. 
+
+Here's a screenshot of the code I used to set up my test run of the OS: ![pic1](https://github.com/Coder-X15/MCUOS/blob/main/screenshots/pic1.jpg)
+
