@@ -1,0 +1,45 @@
+#ifndef apps_h
+#define apps_h
+
+#include "Arduino.h"
+#include "Subroutine.h"
+
+//Library to develop apps and subroutines with
+
+class App
+{
+	public:
+		virtual void load() = 0; // virtual function to set up the app
+		virtual void run() = 0; // virtual function to run it
+};
+
+class AppTray{
+	private:
+		App *apps[10]; // space to load apps into
+	public:
+		void add_app(App &app, int priority){
+			//adds app into the list
+			apps[priority] = &app;
+		}
+		void swap_address(int app_addr_a, int app_addr_b)
+		{
+			//to swap the orders of the apps
+			App *temp = apps[app_addr_a];
+			apps[app_addr_a] = apps[app_addr_b];
+			apps[app_addr_b] = temp;
+		} 
+		void load_app(int index){
+			//loads the app at 'index'
+			if(apps[index] != NULL){
+				apps[index]->load();
+			}
+		}
+		void run_app(int index){
+			//runs the app at 'index'
+			if(apps[index] != NULL){
+				apps[index]->run();
+			}
+		}
+}app_tray;
+
+#endif
