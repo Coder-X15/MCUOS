@@ -39,3 +39,4 @@ More info will be added after completion.
 
 Here's a screenshot of the code I used to set up my test run of the OS: ![pic1](https://github.com/Coder-X15/MCUOS/blob/main/screenshots/pic1.jpg)
 
+And yes, please don't forget to contribute or give this a star! 😉
