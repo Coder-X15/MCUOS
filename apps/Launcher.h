@@ -22,9 +22,10 @@ class Launcher : public App
 		void run(){
 			int app_number = 0;
 			lcd_display.clear_screen();
+			lcd_display.lcd.home();
 			lcd_display.show("UP/DOWN/SELECT");
 			lcd_display.lcd.setCursor(0,2);
-			lcd_display.show("to toggle app number");
+			lcd_display.show("to toggle app no");
 			while(exit_launcher == false){
 				sub_scheduler.run_list();
 				if(button_type == BT_DOWN){
