@@ -40,7 +40,7 @@ class Launcher : public App
 					app_tray.load_app(app_number);
 					exit_launcher = true;
 				}
-				delay(1000);
+				delay(100);
 				clrscr();
 			}
 			app_tray.run_app(app_number);
