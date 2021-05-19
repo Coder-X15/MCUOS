@@ -3,11 +3,17 @@ Operating system(OS) simulator for Arduino devices
 --------
 
 I had to create and delete and then create again and delete another repository of the same name, and this is the final one I got after days of working 😅. The previous ones weren't working well and didn't have the file system as this one. \
-Also, I haven't gone into the depths of CS (computer science) to build this and this one has not much complexity, so beginners may enjoy using this while CS students/ graduates may say "What is this, boy? You seem to have made a mess!".
+Also, I haven't gone into the depths of CS (computer science) to build this and this one has not much complexity, so beginners may enjoy using this while CS students/ graduates may say "What is this, boy? You seem to have made a mess!"(Needn't be so always; I have been able to successfully implement multithreading. I'll only have to find a way to implement multitasking).
 
 ## What is this ?
 ----
-A small OS simulator I made for those who wish to make DIY smartwatches and stuff. Current device support goes to an LCD shield with pin configuration {rs, en, d4, d5, d6, d7} = {8,9,4,5,6,7} and analogue values for the buttons in the button interface as in the `constants.h ` file (the pin configuration is also there; you can fork my repo and edit the files to make a version for yourself).
+A small OS simulator I made for those who wish to make DIY smartwatches and stuff. Current device support goes to an LCD shield with pin configuration {rs, en, d4, d5, d6, d7} = {8,9,4,5,6,7} and analogue values for the buttons in the button interface as in the `constants.h ` file (the pin configuration is also there; you can fork my repo and edit the files to make a version for yourself). I am planning to include a setup script later so that you may set your version of the OS up with the pin configs and button values of your devices.
+
+## What is this capable of?
+Currently, you can:
+* Do multithreading, but due to a bit of less-planned programming, not all threads would be running as long as the respective subroutine handlers(the components of the apps that have to be run either in th foreground or in the background are stored in the order of their priority number (from 0 to 9) in here and run sequentially) aren't called.
+* Create small apps that you'd love to have on your device, but there are limitations to the number of apps you can make in this version : a total of 10 apps can be added in the app tray where the first one is the launcher. Out of the remaining nine, the first one is the sample app which you can replace with another app of your preference.
+* Create a custom launcher. Mine is an ad hoc version which shows no app name and requires you to check the serial monitor to see if you're gonna choose the right app :sweat_smile: 
 
 ## How can you contribute ?
 ----
@@ -25,8 +31,8 @@ Let's look into those.
 1.  How should I make apps for my device? \
     Well, you can check out the script for a sample app (in the `Sample_App` file) in the `apps` directory. There, you'll find how you to make your first app. You may also check     the code for the launcher in `Launcher.h` \
     For elaborating how that can be done, let me explain as much as I can about it to you. \
-    * You have to place your apps in headers (As the `Sample_App.h` file)
-    * As you programme your app, you have to first make single-run app-specific subroutines (as `run_duties` in `Sample_App.h`). Then, as you define the class for your app, you       have to code the `load` function to load the subroutines into the `app_scheduler` subroutine handler(i.e., include the line `app_scheduler.add_chunk(subroutine_name,             subroutine_name.priority);` in `load` for all the subroutines you have to add).
+    * You have to place your apps in headers (as the `Sample_App.h` file)
+    * As you programme your app, you have to first make single-run app-specific subroutines if they need it (as `run_duties` in `Sample_App.h`). Then, as you define the class for your app, you       have to code the `load` function to load the subroutines into the `app_scheduler` subroutine handler(i.e., include the line `app_scheduler.add_chunk(subroutine_name,             subroutine_name.priority);` in `load` for all the subroutines you have to add).
     * In the `run` function, you have to add `app_scheduler.run_list();` to run the tasks in the subroutine handler.This ensures that other subroutines added in the list of app-       specific subroutines run even if the resources aren't allowed for them.
     * Also, don't forget to add the priority numbers (0 to 9) to your apps and subroutines. Also, take care to avod giving the same priority number to a group of apps/subroutines \
      However, there are many more things to be taken care about which I'll mention in this `README` file after all's complete and maintained.
