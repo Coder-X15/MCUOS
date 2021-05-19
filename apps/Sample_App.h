@@ -18,7 +18,7 @@ class RunDuties : public Subroutine
 		void run(){
 			button_type = BT_TEMP; //clearing previously read button
 			sub_scheduler.run_list(); //running the list of subroutines
-			delay(1000);
+			delay(100);
  			if(button_type == BT_SELECT){
 				clrscr();
 				print("App closed.");
