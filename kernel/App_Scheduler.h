@@ -25,11 +25,17 @@ class App_Scheduler
 			app_chunks[chunk_order_a] = app_chunks[chunk_order_b];
 			app_chunks[chunk_order_b] = temp;
 		} 
+		void set_status(int index, int status){
+			//sets status of the subroutine
+			app_chunks[index]->status = status;
+		}
 		void run_list(){
 			// runs the chunks in the order of their priority
 			for(int i = 0; i < 10; i++){
 				if(app_chunks[i] != NULL){
-					app_chunks[i]->run();
+					if(app_chunks[i]->status != 0){
+						app_chunks[i]->run();	
+					}
 				}
 			}
 		}
