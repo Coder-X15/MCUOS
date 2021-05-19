@@ -16,10 +16,12 @@ class App
 class AppTray{
 	private:
 		App *apps[10]; // space to load apps into
+		char *app_names[10]; //app names
 	public:
-		void add_app(App &app, int priority){
+		void add_app(App &app, int priority, char app_name[]){
 			//adds app into the list
 			apps[priority] = &app;
+			app_names[priority] = app_name;
 		}
 		void swap_address(int app_addr_a, int app_addr_b)
 		{
@@ -38,6 +40,12 @@ class AppTray{
 			//runs the app at 'index'
 			if(apps[index] != NULL){
 				apps[index]->run();
+			}
+		}
+		char* getName(int index){
+			//returns name of the app
+			if(apps[index] != NULL){
+				return(app_names[index]);
 			}
 		}
 }app_tray;
