@@ -17,7 +17,7 @@ class RunDuties : public Subroutine
 		int status = 0;
 		void run(){
 			button_type = BT_TEMP; //clearing previously read button
-			sub_scheduler.run_list(); //running the list of subroutines
+			sub_scheduler.run_list();  //running the list of subroutines
 			delay(100);
  			if(button_type == BT_SELECT){
 				clrscr();
@@ -29,7 +29,7 @@ class RunDuties : public Subroutine
 				reset_screen();
 				print("Awaiting input..");
 				newline();
-				print(char(button_type));
+				print_other<int>(button_type);
 			}			
 		}
 }run_duties;

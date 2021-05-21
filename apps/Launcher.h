@@ -1,12 +1,17 @@
 #ifndef Launcher_h
 #define Launcher_h
 
+//Standard libraries to import
+
 #include "Arduino.h"
 #include "apps.h"
 #include "kernel/kernel.h"
-#include "Sample_App.h"
 #include "constants.h"
 #include "general_functions.h"
+ 
+//App headers
+#include "Torch.h"
+#include "Sample_App.h"
 
 // Launcher of my OS!
 
@@ -19,6 +24,7 @@ class Launcher : public App
 		void load(){
 			//at index 1 in the app tray is the sample app we made (even if it isn't empty)
 			app_tray.add_app(sample_app, sample_app.priority, sample_app.name);
+			app_tray.add_app(torch_app, torch_app.priority, torch_app.name);
 		}
 		void run(){
 			exit_launcher = false;
@@ -29,7 +35,7 @@ class Launcher : public App
 				print("Home Screen");
 				newline();
 				print(app_tray.getName(app_number));
-				sub_scheduler.run_list();
+				sys_loop();
 				if(button_type == BT_DOWN){
 					app_number++;
 				}
