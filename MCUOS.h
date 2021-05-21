@@ -12,6 +12,7 @@ class OperatingSystem
 {
 	public:
 		void load(){
+			 analog_pinset.set_state(A0, true); //initializing button pin
 			lcd_display.initialize_display();  //initializing display 
 			sub_scheduler.add_chunk(button_read, button_read.priority);
 			sub_scheduler.add_chunk(button_check, button_check.priority);
