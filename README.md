@@ -30,12 +30,7 @@ Let's look into those.
 
 1.  How should I make apps for my device? \
     Well, you can check out the script for a sample app (in the `Sample_App` file) in the `apps` directory. There, you'll find how you to make your first app. You may also check     the code for the launcher in `Launcher.h` \
-    For elaborating how that can be done, let me explain as much as I can about it to you. \
-    * You have to place your apps in headers (as the `Sample_App.h` file)
-    * As you programme your app, you have to first make single-run app-specific subroutines if they need it (as `run_duties` in `Sample_App.h`). Then, as you define the class for your app, you       have to code the `load` function to load the subroutines into the `app_scheduler` subroutine handler(i.e., include the line `app_scheduler.add_chunk(subroutine_name,             subroutine_name.priority);` in `load` for all the subroutines you have to add).
-    * In the `run` function, you have to add `app_scheduler.run_list();` to run the tasks in the subroutine handler.This ensures that other subroutines added in the list of app-       specific subroutines run even if the resources aren't allowed for them.
-    * Also, don't forget to add the priority numbers (0 to 9) to your apps and subroutines. Also, take care to avod giving the same priority number to a group of apps/subroutines \
-     However, there are many more things to be taken care about which I'll mention in this `README` file after all's complete and maintained.
+    Also, I have added a new app : the flashlight app (at index 2) using which you can toggle an LED connected to pin 3 on or of using the UP and DOWN buttons. To quit the app,     press the SELECT button.
 2.  How can I register the apps in the system? \
     That just requires a few `#include` directives to include the headers for your own apps and a few `app_tray.add_app(app_name, app_name.priority)` lines replacing `app_name`     with the name of the object that refers to you app in the `load` function of the launcher.
 3.  How should I use the devices connected to my Arduino unit? \
