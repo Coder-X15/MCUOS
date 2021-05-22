@@ -15,7 +15,7 @@ Currently, you can:
 * Create small apps that you'd love to have on your device, but there are limitations to the number of apps you can make in this version : a total of 10 apps can be added in the app tray where the first one is the launcher. Out of the remaining nine, the first one is the sample app which you can replace with another app of your preference.
 * Create a custom launcher. Mine is an ad hoc version which shows no app name and requires you to check the serial monitor to see if you're gonna choose the right app :sweat_smile: 
 
-## How can you contribute ?
+## How can you contribute?
 ----
 * Perhaps a star?
 * Fork and make your own version of this (one with device modifications would be most suitable; I didn't have the stuff to make a smartwatch, so maybe you can edit the `Display.h` file in the `hardware` folder and the occurences of the functions in that files to make a version fit for  TFT shield or OLED display - when doing so please ensure that you make the necessary changes to the `constants.h` file). 
@@ -30,7 +30,7 @@ Let's look into those.
 
 1.  How should I make apps for my device? \
     Well, you can check out the script for a sample app (in the `Sample_App` file) in the `apps` directory. There, you'll find how you to make your first app. You may also check     the code for the launcher in `Launcher.h` \
-    Also, I have added a new app : the flashlight app (at index 2) using which you can toggle an LED connected to pin 3 on or of using the UP and DOWN buttons. To quit the app,     press the SELECT button.
+    Also, I have added a new app : the flashlight app (at index 2) using which you can toggle an LED connected to pin 3 on or of using the UP and DOWN buttons. To quit the app,     press the SELECT button. I currently don't have enough hardware, so I can't see if it is working. 
 2.  How can I register the apps in the system? \
     That just requires a few `#include` directives to include the headers for your own apps and a few `app_tray.add_app(app_name, app_name.priority)` lines replacing `app_name`     with the name of the object that refers to you app in the `load` function of the launcher.
 3.  How should I use the devices connected to my Arduino unit? \
