@@ -29,7 +29,7 @@ class RunDuties : public Subroutine
 				reset_screen();
 				print("Awaiting input..");
 				newline();
-				print_other<int>(button_type);
+				print("Press SELECT");
 			}			
 		}
 }run_duties;

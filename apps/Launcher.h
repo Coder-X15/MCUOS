@@ -29,9 +29,9 @@ class Launcher : public App
 		void run(){
 			exit_launcher = false;
 			int app_number = 0;
-			lcd_display.clear_screen();
-			lcd_display.lcd.home();
 			while(exit_launcher == false){
+				clrscr();
+				reset_screen();
 				print("Home Screen");
 				newline();
 				print(app_tray.getName(app_number));
@@ -47,7 +47,6 @@ class Launcher : public App
 					exit_launcher = true;
 				}
 				delay(100);
-				clrscr();
 			}
 			app_tray.run_app(app_number);
 		}
