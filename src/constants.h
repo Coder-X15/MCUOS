@@ -1,7 +1,7 @@
 #ifndef constants_h
 #define constants_h
 
-/* This file is where you pu the system constants (especially the configuratiosn of the hardware, etc.).
+/* This file is where you put the system constants (especially the configuratiosn of the hardware, etc.).
 You can edit this file to match your system's requirements */
 
 //LCD pin configuration
