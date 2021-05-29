@@ -7,7 +7,7 @@ Also, I haven't gone into the depths of CS (computer science) to build this and 
 
 ## What is this ?
 ----
-A small OS simulator I made for those who wish to make DIY smartwatches and stuff. Current device support goes to an LCD shield with pin configuration {rs, en, d4, d5, d6, d7} = {8,9,4,5,6,7} and analogue values for the buttons in the button interface as in the `constants.h ` file (the pin configuration is also there; you can fork my repo and edit the files to make a version for yourself).To run it, compile and upload the `RunOS.ino` sketch onto the boad I am planning to include a setup script later so that you may set your version of the OS up with the pin configs and button values of your devices.
+A small OS simulator I made for those who wish to make DIY smartwatches and stuff. Current device support goes to an LCD shield with pin configuration {rs, en, d4, d5, d6, d7} = {8,9,4,5,6,7} and analogue values for the buttons in the button interface as in the `constants.h ` file (the pin configuration is also there; you can fork my repo and edit the files to make a version for yourself).To run it, compile and upload the `RunOS.ino` sketch from File>Examples>MCUOS in the File menu onto the boad. I am planning to include a setup script later so that you may set your version of the OS up with the pin configs and button values of your devices.
 
 ## What is this capable of?
 Currently, you can:
