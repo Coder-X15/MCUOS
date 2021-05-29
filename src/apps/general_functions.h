@@ -3,7 +3,7 @@
 
 #include "Arduino.h"
 #include "apps.h"
-#include "hardware/hardware.h"
+#include "src/hardware/hardware.h"
 
 //list of frequently usable functions, just to simplify the making of the app
 
