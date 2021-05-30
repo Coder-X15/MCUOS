@@ -5,6 +5,11 @@ Operating system(OS) simulator for Arduino devices
 I had to create and delete and then create again and delete another repository of the same name, and this is the final one I got after days of working 😅. The previous ones weren't working well and didn't have the file system as this one. \
 Also, I haven't gone into the depths of CS (computer science) to build this and this one has not much complexity, so beginners may enjoy using this while CS students/ graduates may say "What is this, boy? You seem to have made a mess!"(Needn't be so always; I have been able to successfully implement multithreading. I'll only have to find a way to implement multitasking).
 
+## What's new?
+I have added a Python-based (version 3 or above) based cofniguration script that will let users configure the library for their device. This has to be run right after you install the library, and please don't forget to have the following data in your hand:
+* The LCD shield/device pinout
+* The `analogRead()` values of the buttons on the button interface of the LCD or that of your custom-made buttonset. 
+
 ## What is this ?
 ----
 A small OS simulator I made for those who wish to make DIY smartwatches and stuff. Current device support goes to an LCD shield with pin configuration {rs, en, d4, d5, d6, d7} = {8,9,4,5,6,7} and analogue values for the buttons in the button interface as in the `constants.h ` file (the pin configuration is also there; you can fork my repo and edit the files to make a version for yourself).To run it, compile and upload the `RunOS.ino` sketch from File>Examples>MCUOS in the File menu onto the boad. I am planning to include a setup script later so that you may set your version of the OS up with the pin configs and button values of your devices.
@@ -20,23 +25,6 @@ Currently, you can:
 * Perhaps a star?
 * Fork and make your own version of this (one with device modifications would be most suitable; I didn't have the stuff to make a smartwatch, so maybe you can edit the `Display.h` file in the `hardware` folder and the occurences of the functions in that files to make a version fit for  TFT shield or OLED display - when doing so please ensure that you make the necessary changes to the `constants.h` file). 
 * Make a new release of this.
-
-Now, simply saying that it's an OS simulator gives rise to a few questions:
-> 1. How should I make apps for my device?
-> 2. How can I register the apps in the system?
-> 3. How should I use the devices connected to my Arduino unit?
-
-Let's look into those.
-
-1.  How should I make apps for my device? \
-    Well, you can check out the script for a sample app (in the `Sample_App` file) in the `apps` directory. There, you'll find how you to make your first app. You may also check     the code for the launcher in `Launcher.h` \
-    Also, I have added a new app : the flashlight app (at index 2) using which you can toggle an LED connected to pin 3 on or of using the UP and DOWN buttons. To quit the app,     press the SELECT button. I currently don't have enough hardware, so I can't see if it is working. 
-2.  How can I register the apps in the system? \
-    That just requires a few `#include` directives to include the headers for your own apps and a few `app_tray.add_app(app_name, app_name.priority)` lines replacing `app_name`     with the name of the object that refers to you app in the `load` function of the launcher.
-3.  How should I use the devices connected to my Arduino unit? \
-    * That can be done using the pins that are free from use, but that too requires you to set the status of usage of the pins (using the `digital_pinset.set_state(pin_number,    is_in_use)`) to `true` (if in use) or `false` (if not) to avoid meddling with those pins in use).
-
-More info will be added after completion. 
 
 Here's a screenshot of the setup script for the OS (in RunOS.ino) : ![pic1](https://github.com/Coder-X15/MCUOS/blob/main/screenshots/pic1.jpg)
 
