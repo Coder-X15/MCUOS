@@ -2,6 +2,22 @@
 ''' The below dictionary contains the items to set up.
     Once the corresponding values are given,
     each line is printed into the constants.h file '''
+#my logo; I badly needed one
+logo_matrix = [
+                "mmmmmmmm         mmmmmmmm     cccccccccccc     uuuuu           uuuuu     oooooooooooo      sssssssssssss ",
+                "mmmm mmmm       mmmm mmmm    cccccccccccccc    uuuuu           uuuuu    oooooooooooooo    sssssssssssssss",
+                "mmmm  mmmm     mmmm  mmmm   cccccccccccccccc   uuuuu           uuuuu   oooooooooooooooo  ssss        ",
+                "mmmm   mmmm   mmmm   mmmm  cccccc              uuuuu           uuuuu  oooooo     oooooo  ssss        ",
+                "mmmm    mmmm mmmm    mmmm  ccccc               uuuuu           uuuuu  ooooo       ooooo   ssss", 
+                "mmmm     mmmmmmm     mmmm  cccc                uuuuu           uuuuu  oooo         oooo    ssssssssssssss ",  
+                "mmmm      mmmmm      mmmm  ccccc               uuuuu          uuuuu   ooooo       ooooo      sssssssssssss",
+                "mmmm       mmm       mmmm  cccccc              uuuuuu        uuuuuu   oooooo     oooooo                ssss",
+                "mmmm                 mmmm   ccccccccccccc       uuuuuuuuuuuuuuuuuu     ooooooooooooooo                ssss",
+                "mmmm                 mmmm    cccccccccccccc      uuuuuuuuuuuuuuuu       ooooooooooooo      ssssssssssssss",
+                "mmmm                 mmmm     ccccccccccccccc     uuuuuuuuuuuuuu         ooooooooooo        ssssssssssss",
+                "MCUOS - OS simulator for Arduino-based devices",
+                "**********************************************"]
+
 #library definition directives
 define_directives = [
         "#ifndef constants_h \n",
@@ -36,11 +52,13 @@ analog_values = {
 }
 
 def prompt():
-	'''Keypress prompt'''
-	input("Press ENTER to continue")
+    '''Keypress prompt'''
+    input("Press ENTER to continue")
 	
 def mainloop():
     ''' main loop'''
+    for line in logo_matrix:
+        print(line)
     print("Welcome to the MCUOS setup!")
     print("Please provide the required data asked for")
     prompt()
@@ -59,11 +77,11 @@ def mainloop():
         for item in analog_values.keys():
             value = int(input(item + ":"))
             config_file.write(analog_values[item].format(value) + "\n")
-	config_file.write("#endif")
+        config_file.write("#endif")
         print("Thanks! We've set up the configuration file for your device.")
-        print("Now you'll ony need to upload the RunOS.ino sketch from File>Examples>MCUOS to upload MCUOS!")
+        print("Now you'll only need to upload the RunOS.ino sketch from File>Examples>MCUOS to upload MCUOS!")
         config_file.close()
-	prompt()
+        prompt()
 
 if __name__ == '__main__':
     mainloop()
