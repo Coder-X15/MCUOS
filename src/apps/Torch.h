@@ -3,8 +3,8 @@
 
 #include "Arduino.h"
 #include "apps.h"
-#include "src/kernel/kernel.h"
-#include "src/constants.h"
+#include "kernel/kernel.h"
+#include "constants.h"
 #include "general_functions.h"
 
 #define TORCH_PIN 10
