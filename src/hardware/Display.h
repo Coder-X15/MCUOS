@@ -4,7 +4,7 @@
 #include "Arduino.h"
 #include "LiquidCrystal.h"
 #include "PinCtrl.h"
-#include "src/constants.h"
+#include "constants.h"
 
 class Display
 {
