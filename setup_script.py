@@ -35,11 +35,15 @@ analog_values = {
         "SELECT button analogue output" : "#define SELECT {0}"
 }
 
+def prompt():
+	'''Keypress prompt'''
+	input("Press ENTER to continue")
+	
 def mainloop():
     ''' main loop'''
     print("Welcome to the MCUOS setup!")
     print("Please provide the required data asked for")
-    input("Press ENTER to continue")
+    prompt()
     with open("src/constants.h",'w') as config_file:
         for line in define_directives:
             config_file.write(line)
@@ -55,9 +59,11 @@ def mainloop():
         for item in analog_values.keys():
             value = int(input(item + ":"))
             config_file.write(analog_values[item].format(value) + "\n")
+	config_file.write("#endif")
         print("Thanks! We've set up the configuration file for your device.")
         print("Now you'll ony need to upload the RunOS.ino sketch from File>Examples>MCUOS to upload MCUOS!")
         config_file.close()
+	prompt()
 
 if __name__ == '__main__':
     mainloop()
