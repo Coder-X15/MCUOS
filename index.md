@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+## Welcome to MCUOS !!!
 
-You can use the [editor on GitHub](https://github.com/Coder-X15/MCUOS/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+I made this with the prime intention of learning a bit more of Arduino and making of Arduino libraries, but it turned out to be a lot more interesting than I thought and hence decided to make this a wonderful tool for DIY device makers.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### What is it?
 
-### Markdown
+Speaking from the simplest definitions, this is an OS simulator for Arduino devices (although I called it an OS on Arduino Project Hub :sweat_smile: . This was first intended for personal use, but as I kept building, I ended up with something I thought I'd have never made had I not thought of it. This basically comprises of a launcher, a platform to make apps (not an app itself; it's just a set of libraries) and two kinds of subroutine schedulers (in the sense that you can change the order of the subroutines placed in them). More development is going on (except that being a school student, it will take me some to find a perfect holiday/ spare time for coding nowadays). \
+More info on the project is here: [MCUOS- Arduino Project Hub page](https://create.arduino.cc/projecthub/SamRuben123/mcuos-an-os-for-arduino-boards-eacf3b?ref=user&ref_id=1104970&offset=0)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### How should I make it work?
 
-```markdown
-Syntax highlighted code block
+Once the library is added to the list fo libraries on Arduino run the `setup_script.py` and set your board up(for V 2.0 only; else just skip to the next part), you'll only need to upload the `RunOS.ino` skecth from File>Exampls>MCUOS.
 
-# Header 1
-## Header 2
-### Header 3
+### Pics/Videos
 
-- Bulleted
-- List
+![OS-setup](https://github.com/Coder-X15/MCUOS/blob/main/screenshots/pic1.jpg)
 
-1. Numbered
-2. List
+### Boards supported:
+#### *v 1.0*
+* Uno
 
-**Bold** and _Italic_ and `Code` text
+#### *v 2.0*
+* Uno
+* Mega
+* Nano
 
-[Link](url) and ![Image](src)
-```
+### Inspriation:
+1. [Arduios by JohsProject](https://github.com/JohnsProject/Arduios)
+2. [FreeRTOS by feilipu](https://github.com/feilipu/Arduino_FreeRTOS_Library)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Credits
+1. [per1234](https://github.com/per1234)
+2. Whoever contributes hereafter.
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Coder-X15/MCUOS/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Bugs
+* No memory management utility in `src/kernel`
