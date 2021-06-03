@@ -13,7 +13,7 @@ Once the library is added to the list fo libraries on Arduino run the `setup_scr
 
 ### Pics/Videos
 
-<img src = 'https://github.com/Coder-X15/MCUOS/blob/gh-pages/assets/pic1.jpg'>
+<img src = 'https://coder-x15.github.io/MCUOS/assets/pic1.jpg' alttext = 'RunOSino'>
 
 ### Boards supported:
 #### *v 1.0*
