@@ -25,7 +25,7 @@ Once the library is added to the list fo libraries on Arduino run the `setup_scr
 * Nano
 
 ### Inspriation:
-1. [Arduios by JohsProject](https://github.com/JohnsProject/Arduios)
+1. [Arduios by JohnsProject](https://github.com/JohnsProject/Arduios)
 2. [FreeRTOS by feilipu](https://github.com/feilipu/Arduino_FreeRTOS_Library)
 
 ### Credits
