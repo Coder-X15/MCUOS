@@ -13,7 +13,7 @@ Once the library is added to the list fo libraries on Arduino run the `setup_scr
 
 ### Pics/Videos
 
-![](pic1.jpg)
+![screenshot](https://coder-x15.github.io/assets/pic1.jpg)
 
 ### Boards supported:
 #### *v 1.0*
