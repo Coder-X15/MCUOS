@@ -83,14 +83,14 @@ def mainloop():
         print("Button interface analogue values setup")
         for item in analog_values.keys():
             value = int(input(item + ":"))
-            config_file.write(analog_values[item].format(value) + "\n"
-	print("___________________________________")
-	print("Board setup")
-	print("** Note: You should edit the baud rate in RunOS.ino according to the baud rate supported by your board")
-	board = input("board : (out of {uno / nano / mega})")
-	for stmt in boards[board.lower()]:
-		config_file.write(stmt)
-	config_file.write("#endif")
+            config_file.write(analog_values[item].format(value) + "\n")
+        print("___________________________________")
+        print("Board setup")
+        print("** Note: You should edit the baud rate in RunOS.ino according to the baud rate supported by your board")
+        board = input("board : (type any one out of {uno / nano / mega})")
+        for stmt in boards[board.lower()]:
+            config_file.write(stmt)
+        config_file.write("#endif")
         print("Thanks! We've set up the configuration file for your device.")
         print("Now you'll only need to upload the RunOS.ino sketch from File>Examples>MCUOS to upload MCUOS!")
         config_file.close()
