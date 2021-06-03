@@ -6,9 +6,10 @@ I had to create and delete and then create again and delete another repository o
 Also, I haven't gone into the depths of CS (computer science) to build this and this one has not much complexity, so beginners may enjoy using this while CS students/ graduates may say "What is this, boy? You seem to have made a mess!"(Needn't be so always; I have been able to successfully implement multithreading. I'll only have to find a way to implement multitasking).
 
 ## What's new?
-I have added a Python-based (version 3 or above) based cofniguration script that will let users configure the library for their device. This has to be run right after you install the library, and please don't forget to have the following data in your hand:
+I have added a Python-based (version 3 or above) based configuration script that will let users configure the library for their device. This has to be run right after you install the library, and please don't forget to have the following data in your hand:
 * The LCD shield/device pinout
 * The `analogRead()` values of the buttons on the button interface of the LCD or that of your custom-made buttonset. 
+* The board you have (currently supports `{uno/nano/mega}` - input either of the three).
 
 ## What is this ?
 ----
