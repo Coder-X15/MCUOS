@@ -72,7 +72,7 @@ class AnalogPins
 		void init_pins(){
 			//initialize pins
 			int analogs[6] = {A0, A1, A2, A3, A4, A5};
-			for(int i = 0; i < 14; i++){
+			for(int i = 0; i < 6; i++){
 				analog_pins[i].pin_number = analogs[i];
 			}
 		}
