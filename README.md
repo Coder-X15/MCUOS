@@ -42,5 +42,10 @@ Here's a screenshot of the setup script for the OS (in RunOS.ino) : ![pic1](http
 
 And yes, please don't forget to contribute or give this a star! 😉
 
+### Changelog
+12/2/2021: Began working on changing library structure
+
 ### Later Comments
 <@CoderX-15 on 12/2/2021>: Well, I guess I had added a custom launcher! My bad 🙄
+
+
