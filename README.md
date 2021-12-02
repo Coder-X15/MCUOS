@@ -41,3 +41,6 @@ More info will be added after completion.
 Here's a screenshot of the setup script for the OS (in RunOS.ino) : ![pic1](https://github.com/Coder-X15/MCUOS/blob/main/screenshots/pic1.jpg)
 
 And yes, please don't forget to contribute or give this a star! 😉
+
+### Later Comments
+<@CoderX-15 on 12/2/2021>: Well, I guess I had added a custom launcher! My bad 🙄
