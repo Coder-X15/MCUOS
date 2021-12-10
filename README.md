@@ -1,11 +1,20 @@
 # MCUOS
 Operating system(OS) simulator for Arduino devices
+## Navigation
+
+* <a href = https://github.com/Coder-X15/MCUOS#announcements> Announcements </a>
+* <a href = https://github.com/Coder-X15/MCUOS#what-is-this> What is this?</a>
+* <a href = https://github.com/Coder-X15/MCUOS#what-is-this-capable-of> What is this capable of? </a>
+* <a href = https://github.com/Coder-X15/MCUOS#how-can-you-contribute> How can you contribute? </a>
+* <a href = https://github.com/Coder-X15/MCUOS#usage> Usage </a>
+* <a href = https://github.com/Coder-X15/MCUOS#changelog> Changelog </a>
+* <a href = https://github.com/Coder-X15/MCUOS#later-comments> Later Comments </a>
 --------
 
 I had to create and delete and then create again and delete another repository of the same name, and this is the final one I got after days of working 😅. The previous ones weren't working well and didn't have the file system as this one. \
 Also, I haven't gone into the depths of CS (computer science) to build this and this one has not much complexity, so beginners may enjoy using this while CS students/ graduates may say "What is this, boy? You seem to have made a mess!"(Needn't be so always; I have been able to successfully implement multithreading. I'll only have to find a way to implement multitasking).
 
-## What is this ?
+## What is this?
 ----
 A small OS simulator I made for those who wish to make DIY smartwatches and stuff. Current device support goes to an LCD shield with pin configuration {rs, en, d4, d5, d6, d7} = {8,9,4,5,6,7} and analogue values for the buttons in the button interface as in the `constants.h ` file (the pin configuration is also there; you can fork my repo and edit the files to make a version for yourself).To run it, compile and upload the `RunOS.ino` sketch from File>Examples>MCUOS in the File menu onto the boad. I am planning to include a setup script later so that you may set your version of the OS up with the pin configs and button values of your devices.
 
@@ -20,6 +29,8 @@ Currently, you can:
 * Perhaps a star?
 * Fork and make your own version of this (one with device modifications would be most suitable; I didn't have the stuff to make a smartwatch, so maybe you can edit the `Display.h` file in the `hardware` folder and the occurences of the functions in that files to make a version fit for  TFT shield or OLED display - when doing so please ensure that you make the necessary changes to the `constants.h` file). 
 * Make a new release of this.
+
+## Usage 
 
 Now, simply saying that it's an OS simulator gives rise to a few questions:
 > 1. How should I make apps for my device?
@@ -48,4 +59,6 @@ And yes, please don't forget to contribute or give this a star! 😉
 ### Later Comments
 <@CoderX-15 on 12/2/2021>: Well, I guess I had added a custom launcher! My bad 🙄
 
+## Announcements
+* The library is available for use in the Arduino Library Manager! Yay!
 
