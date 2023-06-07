@@ -2,6 +2,7 @@
 #define PinCtrl_H
 
 #include "Arduino.h"
+#include "constants.h"
 
 struct Pin
 {
@@ -18,7 +19,7 @@ class DigitalPins
 	public:
 		void init_pins(){
 			// to initailize pins
-			for(int i = 0; i < 14; i++){
+			for(int i = 0; i < DIGITAL; i++){
 				digital_pins[i].pin_number = i;
 			}
 		}
@@ -37,7 +38,7 @@ class DigitalPins
 		}
 		void set_pin_state(int pin, int state){
 			//executes the digitalRead function using the pin
-			if(digital_pins[pin].in_use == false){
+			if(digital_pins[pin].in_use == true){
 				digitalWrite(pin, state);
 			} else {
 				Serial.println("Pin in use ! Use anpther pin");
@@ -72,7 +73,7 @@ class AnalogPins
 		void init_pins(){
 			//initialize pins
 			int analogs[6] = {A0, A1, A2, A3, A4, A5};
-			for(int i = 0; i < 6; i++){
+			for(int i = 0; i < ANALOG; i++){
 				analog_pins[i].pin_number = analogs[i];
 			}
 		}
