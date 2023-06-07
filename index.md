@@ -14,7 +14,9 @@ Once the library is added to the list fo libraries on Arduino run the `setup_scr
 ### Pics/Videos
 
 <img src = 'https://coder-x15.github.io/MCUOS/assets/pic1.jpg' alttext = 'RunOSino'>
-
+<video width="320" height="240" autoplay>
+  <source src="https://coder-x15.github.io/MCUOS/assets/trial.mp4" type="video/mp4">
+</video>
 ### Boards supported:
 #### *v 1.0*
 * Uno
