@@ -8,6 +8,7 @@
 #include "general_functions.h"
 
 #define TORCH_PIN 10
+#define TORCH_GND 12
 
 class Torch : public App
 {
@@ -17,6 +18,8 @@ class Torch : public App
 		bool app_exit = false;
 		void load(){
 			set_digital_pin(TORCH_PIN, OUTPUT);
+			set_digital_pin(TORCH_GND, INPUT);
+			write_digital_pin(TORCH_GND, LOW);
 		}	
 		void run(){
 			clrscr();
