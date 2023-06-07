@@ -44,11 +44,11 @@ setup_items = {
 } 
 #button interface setup 
 analog_values = {
-        "UP button analogue output" : "#define UP {0}",
-        "DOWN button analogue output" : "#define DOWN {0}",
-        "LEFT button analogue output" : "#define LEFT {0}",
-        "RIGHT button analogue output" : "#define RIGHT {0}",
-        "SELECT button analogue output" : "#define SELECT {0}"
+        "UP button analogue output (as 'floor(<analog mapped value>/100)')" : "#define UP {0}",
+        "DOWN button analogue output (as 'floor(<analog mapped value>/100)')" : "#define DOWN {0}",
+        "LEFT button analogue output (as 'floor(<analog mapped value>/100)')" : "#define LEFT {0}",
+        "RIGHT button analogue output (as 'floor(<analog mapped value>/100)')" : "#define RIGHT {0}",
+        "SELECT button analogue output (as 'floor(<analog mapped value>/100)')" : "#define SELECT {0}"
 }
 #board names
 boards = {
