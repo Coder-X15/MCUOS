@@ -38,7 +38,7 @@ class DigitalPins
 		}
 		void set_pin_state(int pin, int state){
 			//executes the digitalRead function using the pin
-			if(digital_pins[pin].in_use == false){
+			if(digital_pins[pin].in_use == true){
 				digitalWrite(pin, state);
 			} else {
 				Serial.println("Pin in use ! Use anpther pin");
