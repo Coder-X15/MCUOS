@@ -22,7 +22,7 @@ class ButtonRead_Subroutine : public Subroutine
 		int priotrity = 0;
 		void run()
 		{
-			int temp = analog_pinset.read_from_pin(A0);
+			int temp = floor(analog_pinset.read_from_pin(A0)/100);
 			button_value = temp;
 		}
 		
